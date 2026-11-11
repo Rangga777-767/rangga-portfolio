@@ -1,53 +1,37 @@
-const skills = ["HTML", "CSS", "JavaScript", "Next.js"];
-
 export default function Home() {
   return (
-    <main className="site-shell">
-      <nav className="navbar" aria-label="Navigasi utama">
-        <a className="brand" href="#home">Rangga<span>.</span></a>
-        <div className="nav-links">
-          <a href="#tentang">Tentang</a>
-          <a href="#keahlian">Keahlian</a>
-          <a href="#kontak">Kontak</a>
-        </div>
-      </nav>
+    <main className="container">
+      <header className="header">
+        <a className="brand" href="/">Rangga</a>
+        <a href="#kontak">Kontak</a>
+      </header>
 
-      <section className="hero" id="home">
-        <p className="eyebrow">PORTOFOLIO SAYA</p>
-        <h1>Halo, saya <span>Rangga.</span></h1>
-        <p className="hero-copy">
-          Saya sedang belajar membuat website dan mengembangkan ide menjadi
-          pengalaman digital yang sederhana dan bermanfaat.
+      <section className="hero">
+        <p className="eyebrow">PORTOFOLIO SISWA TKJ</p>
+        <h1>Halo, saya Rangga.</h1>
+        <p className="intro">
+          Saya sedang belajar jaringan komputer dan pengembangan website.
+          Ini adalah tempat untuk memperkenalkan diri dan menampilkan proyek saya.
         </p>
-        <a className="button" href="#tentang">Kenali saya</a>
+        <a className="button" href="#proyek">Lihat proyek</a>
       </section>
 
-      <section className="content-section" id="tentang">
-        <p className="eyebrow">TENTANG SAYA</p>
-        <h2>Senang belajar dan berkarya.</h2>
-        <p className="section-copy">
-          Ini adalah tempat untuk memperkenalkan diri, menceritakan minat, dan
-          menampilkan hal-hal yang sedang saya pelajari. Silakan ubah teks ini
-          agar sesuai dengan ceritamu.
+      <section id="proyek" className="section">
+        <h2>Proyek</h2>
+        <article className="card">
+          <h3>Proyek pertama</h3>
+          <p>Ganti bagian ini dengan deskripsi proyek yang benar-benar kamu buat.</p>
+        </article>
+      </section>
+
+      <section id="kontak" className="section">
+        <h2>Kontak</h2>
+        <p>
+          Email: <a href="mailto:emailkamu@example.com">emailkamu@example.com</a>
         </p>
       </section>
 
-      <section className="content-section" id="keahlian">
-        <p className="eyebrow">YANG SAYA PELAJARI</p>
-        <h2>Keahlian</h2>
-        <div className="skill-list">
-          {skills.map((skill) => <span className="skill" key={skill}>{skill}</span>)}
-        </div>
-      </section>
-
-      <section className="contact-card" id="kontak">
-        <p className="eyebrow">MARI TERHUBUNG</p>
-        <h2>Punya ide atau ingin menyapa?</h2>
-        <p>Tambahkan alamat email atau tautan media sosialmu di sini.</p>
-        <a className="button button-light" href="mailto:emailkamu@example.com">Hubungi saya</a>
-      </section>
-
-      <footer className="footer">© {new Date().getFullYear()} Rangga. Dibuat dengan Next.js.</footer>
+      <footer className="footer">© {new Date().getFullYear()} Rangga</footer>
     </main>
   );
 }
