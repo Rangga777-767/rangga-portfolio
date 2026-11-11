@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --ink: #172033;
+  --muted: #64748b;
+  --accent: #6d5dfc;
+  --paper: #f7f8fc;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+.site-shell { width: min(100% - 40px, 980px); margin: 0 auto; }
+.navbar { height: 82px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.06em; }
+.brand span, .hero h1 span { color: var(--accent); }
+.nav-links { display: flex; gap: 28px; color: var(--muted); font-size: .95rem; }
+.nav-links a:hover { color: var(--accent); }
+.hero { min-height: 470px; padding: 105px 0 90px; }
+.eyebrow { margin: 0 0 16px; color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .16em; }
+h1, h2, p { margin-top: 0; }
+.hero h1 { max-width: 700px; margin-bottom: 20px; font-size: clamp(3rem, 8vw, 5.5rem); letter-spacing: -.075em; line-height: 1.02; }
+.hero-copy, .section-copy { max-width: 590px; color: var(--muted); font-size: 1.1rem; line-height: 1.8; }
+.button { display: inline-flex; margin-top: 16px; padding: 13px 20px; border-radius: 999px; background: var(--accent); color: white; font-weight: 700; }
+.button:hover { filter: brightness(.92); }
+.content-section { padding: 65px 0; border-top: 1px solid #e4e7ef; }
+.content-section h2, .contact-card h2 { margin-bottom: 14px; font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.05em; }
+.skill-list { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.skill { padding: 10px 16px; border: 1px solid #e2e5ef; border-radius: 999px; background: white; color: #475569; }
+.contact-card { margin: 50px 0; padding: clamp(28px, 7vw, 60px); border-radius: 24px; background: #20233a; color: white; }
+.contact-card .eyebrow { color: #b9b2ff; }
+.contact-card p:not(.eyebrow) { color: #c4c6d3; }
+.button-light { background: white; color: #20233a; }
+.footer { padding: 28px 0 40px; border-top: 1px solid #e4e7ef; color: var(--muted); font-size: .9rem; }
+
+@media (max-width: 600px) {
+  .site-shell { width: min(100% - 32px, 980px); }
+  .navbar { height: 70px; }
+  .nav-links { gap: 14px; font-size: .82rem; }
+  .hero { min-height: 410px; padding-top: 90px; }
+}
